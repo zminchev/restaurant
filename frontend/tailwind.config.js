@@ -5,7 +5,13 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
+    fontFamily: {
+      'sans': ['Poppins','sans-serif'],
+    },
     extend: {
+      lineHeight:{
+        '19': '4.75rem',
+      },
       colors: {
         primary: {
           orange: '#FC8019',

@@ -1,7 +1,5 @@
 import React, { useState } from 'react';
 import Image from 'next/image';
-import NavSearch from 'components/NavSearch';
-import Button from 'components/Button';
 import MainNav from 'components/MainNav';
 
 export default function Header() {

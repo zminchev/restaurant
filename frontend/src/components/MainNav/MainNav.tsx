@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Image from 'next/image';
 import NavSearch from 'components/NavSearch';
 import Button from 'components/Button';
