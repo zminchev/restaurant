@@ -7,7 +7,7 @@ interface CardProps {
 }
 
 const Card: React.FC<CardProps> = ({ item, index }) => {
-  const isFirst = index === 0;
+  const isFirst = index === 0; 
 
   return (
     <div>
