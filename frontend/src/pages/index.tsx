@@ -1,7 +1,10 @@
+import Header from 'components/Header';
+import MainNav from 'components/MainNav';
+
 export default function Home() {
   return (
     <>
-      <header>Header</header>
+      <Header />
       <main>Home</main>
       <footer>Footer</footer>
     </>
