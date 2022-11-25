@@ -1,13 +1,14 @@
 import React from 'react';
 import Carousel from 'components/Carousel';
-import { cardData } from 'mock/mock-data';
 import NavSearch from 'components/NavSearch';
 import Button from 'components/Button';
+import { cardData, citiesData } from 'mock/mock-data';
+import PopularCities from 'components/PopularCities/PopularCities';
 
 const HomepageHero = () => {
   return (
     <div className="flex justify-between">
-      <div className="py-52 pl-52 max-w-4xl">
+      <div className="py-48 pl-48 max-w-4xl">
         <div className="text-5xl font-medium leading-19">
           <h1>
             Premium <span className="text-primary-orange">quality</span>
@@ -24,16 +25,18 @@ const HomepageHero = () => {
             </span>
           </h1>
         </div>
-        <p className="text-base py-8">
+        <p className="text-base py-8 font-inter font-normal">
           Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis
           numquam corrupti labore suscipit possimus similique tempore harum hic,
           id, doloremque reiciendis soluta culpa impedit quibusdam ipsam alias?
           Asperiores, totam earum!
         </p>
-        <div className='flex w-full justify-start'>
-          <NavSearch />
-          <Button text="Get Started"/>
+        <div className='pb-8 flex w-full'>
+          <NavSearch hasIcon={false} placeholder="Enter your delivery location"/>
+          <Button className="ml-6 whitespace-nowrap" text="Get Started"/>
         </div>
+        {/* Country/cities could be dynamic based on the user's location */}
+        <PopularCities cities={citiesData} country="India"/>
       </div>
       <Carousel items={cardData} />
     </div>

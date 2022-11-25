@@ -12,3 +12,26 @@ export const cardData = [
     src: '/assets/Card_3.png',
   },
 ];
+
+export const citiesData = [
+  {
+    id: 1,
+    name: 'Mumbai',
+  },
+  {
+    id: 2,
+    name: 'Delhi',
+  },
+  {
+    id: 3,
+    name: 'Bangalore',
+  },
+  {
+    id: 4,
+    name: 'Hyderabad',
+  },
+  {
+    id: 5,
+    name: 'Ahmedabad',
+  },
+]
