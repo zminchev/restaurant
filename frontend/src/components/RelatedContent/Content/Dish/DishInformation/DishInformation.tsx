@@ -19,7 +19,8 @@ const DishInformation: React.FC<DishInformationProps> = ({
   rating,
 }) => {
   const starSrc =
-    rating && rating < 4 ? '/icons/star.svg' : '/icons/star_low.svg';
+    rating && rating < 4 ? '/icons/star_low.svg' : '/icons/star.svg';
+
   return (
     <>
       <h1 className="pb-6">{name}</h1>

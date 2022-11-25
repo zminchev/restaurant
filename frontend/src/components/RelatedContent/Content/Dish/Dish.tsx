@@ -17,7 +17,7 @@ const Dish: React.FC<DishProps> = ({
   const decimalRating = parseInt(rating.toFixed(1));
 
   return (
-    <Card className="max-w-xxs">
+    <Card className="max-w-xs">
       <Image
         className="rounded-xl pb-4"
         width={256}
@@ -29,9 +29,9 @@ const Dish: React.FC<DishProps> = ({
         availableSeatsForTwo={availableSeatsForTwo}
         estimatedPrepTime={estimatedPrepTime}
         price={price}
-        rating={decimalRating}
-        description={descriptionLowerCase}
         name={name}
+        description={descriptionLowerCase}
+        rating={decimalRating}
       />
     </Card>
   );
