@@ -6,7 +6,7 @@ interface DishInformationProps {
   price?: number;
   name: string;
   description: string;
-  rating?: number;
+  rating?: number | string;
   estimatedPrepTime?: number;
 }
 

@@ -14,7 +14,7 @@ const Dish: React.FC<DishProps> = ({
   estimatedPrepTime,
 }) => {
   const descriptionLowerCase = description.toLowerCase();
-  const decimalRating = parseInt(rating.toFixed(1));
+  const decimalRating = rating.toFixed(1)
 
   return (
     <Card className="max-w-xs">
