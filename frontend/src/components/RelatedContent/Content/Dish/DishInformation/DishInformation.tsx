@@ -2,11 +2,11 @@ import React from 'react';
 import Image from 'next/image';
 
 interface DishInformationProps {
+  availableSeatsForTwo?: number;
+  price?: number;
   name: string;
   description: string;
   rating?: number;
-  availableSeatsForTwo?: number;
-  price?: number;
   estimatedPrepTime?: number;
 }
 
@@ -19,10 +19,9 @@ const DishInformation: React.FC<DishInformationProps> = ({
   rating,
 }) => {
   const starSrc =
-    rating && rating < 4 ? '/icons/star_low.svg' : '/icons/star.svg';
-
+    rating && rating < 4 ? '/icons/star.svg' : '/icons/star_low.svg';
   return (
-    <div className="flex w-full justify-between">
+    <>
       <h1 className="pb-6">{name}</h1>
       <div className="flex w-full justify-between pb-6">
         <div className="w-1/2">
@@ -37,53 +36,55 @@ const DishInformation: React.FC<DishInformationProps> = ({
           </div>
         )}
       </div>
-      {estimatedPrepTime && availableSeatsForTwo && (
-        <>
-          <div className="flex items-center w-1/2">
-            <Image
-              src="/icons/estimated_delivery_icon.svg"
-              width={16}
-              height={16}
-              alt="est delivery"
-            />
-            <p className="ml-1">{estimatedPrepTime} Mins</p>
-          </div>
-          <div className="flex items-center w-1/2 justify-end">
-            <Image
-              src="/icons/available_seats.svg"
-              width={16}
-              height={16}
-              alt="available seats"
-            />
-            <p className="text-base font-normal ml-1">
-              {availableSeatsForTwo} for two
-            </p>
-          </div>
-        </>
-      )}
-      {price && estimatedPrepTime && (
-        <>
-          <div className="flex items-center w-1/2">
-            <Image
-              src="/icons/price_icon.svg"
-              width={16}
-              height={16}
-              alt="price"
-            />
-            <p className="text-base font-normal ml-1">${price}</p>
-          </div>
-          <div className="flex items-center w-1/2 justify-end">
-            <Image
-              src="/icons/estimated_delivery_icon.svg"
-              width={16}
-              height={16}
-              alt="est delivery"
-            />
-            <p className="ml-1">{estimatedPrepTime} Mins</p>
-          </div>
-        </>
-      )}
-    </div>
+      <div className="flex w-full justify-between">
+        {estimatedPrepTime && availableSeatsForTwo && (
+          <>
+            <div className="flex items-center w-1/2">
+              <Image
+                src="/icons/estimated_delivery_icon.svg"
+                width={16}
+                height={16}
+                alt="est delivery"
+              />
+              <p className="ml-1">{estimatedPrepTime} Mins</p>
+            </div>
+            <div className="flex items-center w-1/2 justify-end">
+              <Image
+                src="/icons/available_seats.svg"
+                width={16}
+                height={16}
+                alt="available seats"
+              />
+              <p className="text-base font-normal ml-1">
+                {availableSeatsForTwo} for two
+              </p>
+            </div>
+          </>
+        )}
+        {price && estimatedPrepTime && (
+          <>
+            <div className="flex items-center w-1/2">
+              <Image
+                src="/icons/price_icon.svg"
+                width={16}
+                height={16}
+                alt="price"
+              />
+              <p className="text-base font-normal ml-1">${price}</p>
+            </div>
+            <div className="flex items-center w-1/2 justify-end">
+              <Image
+                src="/icons/estimated_delivery_icon.svg"
+                width={16}
+                height={16}
+                alt="est delivery"
+              />
+              <p className="ml-1">{estimatedPrepTime} Mins</p>
+            </div>
+          </>
+        )}
+      </div>
+    </>
   );
 };
 
