@@ -40,7 +40,7 @@ export const dishesData = [
   {
     id: 1,
     name: 'Pizza',
-    description: 'Pizza good',
+    description: 'Pizza goooooooooooooooooooooooooooood',
     rating: 4,
     availableSeatsForTwo: 2,
     estimatedPrepTime: 30,
@@ -76,7 +76,7 @@ export const dishesData = [
   {
     id: 5,
     name: 'Noodles',
-    description: 'Noodles good',
+    description: 'Noodles gooooooooooooooooooooooooooooooooooooood',
     rating: 3,
     price: 50,
     estimatedPrepTime: 30,
