@@ -17,7 +17,7 @@ const Dish: React.FC<DishProps> = ({
   const decimalRating = rating.toFixed(1)
 
   return (
-    <Card className="max-w-xs">
+    <Card className="max-w-xxs">
       <Image
         className="rounded-xl pb-4"
         width={256}
