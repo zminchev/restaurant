@@ -12,6 +12,9 @@ module.exports = {
       inter: ['Inter', 'sans-serif'],
     },
     extend: {
+      maxWidth: {
+        xxs: '18.75rem',
+      },
       lineHeight: {
         19: '4.75rem',
       },
