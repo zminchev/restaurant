@@ -1,11 +1,13 @@
 import Header from 'components/Header';
-import MainNav from 'components/MainNav';
+import HomepageHero from 'components/HomepageHero';
 
 export default function Home() {
   return (
     <>
       <Header />
-      <main>Home</main>
+      <main>
+        <HomepageHero />
+      </main>
       <footer>Footer</footer>
     </>
   );
